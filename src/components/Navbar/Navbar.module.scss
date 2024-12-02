@@ -1,0 +1,137 @@
+.nav {
+  width: 100%;
+  background-color: #fff;
+  .navHeader {
+      position: fixed;
+      z-index: 1;
+      padding: 12px 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffa03f; 
+  }
+
+  .navLogo a {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+  }
+
+  .navMenuBtn {
+      font-size: 24px;
+      cursor: pointer;
+      img{
+          filter: brightness(0) invert(1); 
+      }
+  }
+
+  .navLinks {
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 32px;
+      padding: 32px;
+      background-color: #ffa03f; 
+      transition: transform 0.5s;
+      z-index: 0;
+      transform: translateY(-120%); 
+      height: auto; 
+
+      &.open {
+          transform: translateY(10%); 
+      }
+
+      a {
+          font-weight: 500;
+          color: #fff;
+          text-decoration: none;
+          transition: 0.3s;
+
+          &:hover {
+              color: #e08b37; 
+          }
+      }
+  }
+
+  .navBtns {
+      display: none;
+  }
+
+  .btn {
+      padding: 12px 24px;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      color: #fff;
+      background-color: #ffa03f;
+      border-radius: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+          background-color: #e08b37; 
+      }
+  }
+
+  img {
+      display: flex;
+      width: 100%; 
+  }
+}
+
+@media (min-width: 768px) {
+  .nav{
+      position: static;
+      padding: 24px 16px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1200px;
+      .navHeader{
+          position: relative;
+          flex: 1;
+          padding: 0;
+          background-color: transparent;
+          .navLogo a{
+              font-size: 24px;
+              color: #020617;
+          }
+          .navLogo span{
+              color: #ffa03f;
+          }
+          .navMenuBtn{
+              display: none;
+          }
+      }
+      .navLinks{
+          position: static;
+          width: fit-content;
+          padding: 0;
+          flex-direction: row;
+          background-color: transparent;
+          transform: none !important;
+          
+          a{
+              color:#020617;
+              font-weight: 500;
+              &:hover {
+                  color: #ffa03f; 
+              }
+          }
+      }
+      .navBtns{
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+      }
+  }
+}
