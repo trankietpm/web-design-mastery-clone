@@ -1,6 +1,6 @@
 .nav {
   width: 100%;
-  background-color: #fff;
+  background-color: #fff; 
   .navHeader {
       position: fixed;
       z-index: 1;
@@ -57,6 +57,9 @@
           &:hover {
               color: #e08b37; 
           }
+      }
+      li{
+        overflow-x: hidden;
       }
   }
 
@@ -119,7 +122,6 @@
           flex-direction: row;
           background-color: transparent;
           transform: none !important;
-          
           a{
               color:#020617;
               font-weight: 500;

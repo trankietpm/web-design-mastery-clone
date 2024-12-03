@@ -12,13 +12,12 @@
             max-width: 475px;
             margin-inline: auto;
             border-radius: 32px;
-            box-shadow: 30px -30px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 30px -30px 0 rgba(0, 0, 0, 0.1);
             display: flex;
             width: 100%;
         }
     }
     .chooseContent{
-        overflow: hidden;
         .sectionSubheader{
             margin-bottom: 16px;
             font-size: 19px;
@@ -26,6 +25,7 @@
             color: #ffa03f;
         }
         .sectionHeader{
+            overflow: hidden;
             font-size: 40px;
             font-weight: 600;
             color: #020617;
@@ -65,5 +65,11 @@
                 color: #1e293b;
             }
         }
+    }
+}
+@media (min-width: 768px) {
+    .chooseContainer{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 }

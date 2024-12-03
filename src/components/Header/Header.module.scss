@@ -36,7 +36,7 @@
             background-color: rgba(255, 255, 255, 0.2);
 
             .inputGroup{
-                flex: 1 0 200px;
+                flex: 1 0 100px;
                 display: grid;
                 gap: 10px;
             }
@@ -62,10 +62,7 @@
                 padding: 13px 15px;
                 font-size: 28px;
                 border-radius: 16px;
-                cursor: pointer;
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 transition: background-color 0.3s;
 
                 &:hover {
@@ -74,9 +71,6 @@
 
                 img {
                     filter: brightness(0) invert(1); 
-                    width: 24px;
-                    height: 24px;
-                    object-fit: contain;
                 }
             }
         }
@@ -114,6 +108,34 @@
                 object-fit: contain;
                 aspect-ratio: 1;
                 box-shadow: none;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .headerContainer{
+        padding-top: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        isolation: isolate;
+        .headerContent{
+            position: relative;
+            padding-bottom: 160px;
+            h1{
+                text-align: left;
+            }
+            .sectionDescription{
+                text-align: left;
+            }
+            form{
+                position: absolute;
+                width: max-content;
+                padding: 19.2px;
+                margin: 0;
+                bottom: 0;
+                border-radius: 24px;
+                backdrop-filter: blur(5px);
+                z-index: 20;
             }
         }
     }

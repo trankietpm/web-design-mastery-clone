@@ -1,0 +1,75 @@
+.sectionContainer{
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 16px;
+}
+.exploreContainer{
+    display: grid;
+    gap: 32px 16px;
+    overflow: hidden;
+    .sectionSubheader{
+        margin-bottom: 16px;
+        font-size: 19px;
+        font-weight: 500;
+        color: #ffa03f;
+    }
+    .sectionHeader{
+        overflow: hidden;
+        font-size: 40px;
+        font-weight: 600;
+        color: #020617;
+        line-height: 52px;
+        span{
+            color : #ffa03f;
+        }
+    }
+    .exploreImage{
+        img{
+            max-width: 475px !important;
+            margin-inline: auto;
+            border-radius: 32px;
+            box-shadow: -30px -30px 0px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            display: flex;
+        }
+    }
+    .sectionDescription{
+        padding-block: 32px;
+    }
+    .exploreBtn{
+        .btn{
+        border: none;
+        padding: 20px 40px;
+        font-size: 24px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        background-color: #ffa03f;
+        color : #ffffff ;
+        transition: 0.3s;
+        cursor: pointer;
+        }
+    }
+    .exploreGrid{
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    h4{
+        font-size: 48px;
+        font-weight: 500;
+        color: #020617;  
+    }
+    p{
+        color : #1e293b;
+    }
+}
+@media (min-width: 768px){
+    .exploreContainer{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        .exploreContent{
+            grid-area: 1/1/2/2;
+        }
+    }
+}

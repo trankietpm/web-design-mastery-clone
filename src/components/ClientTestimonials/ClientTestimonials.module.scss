@@ -1,0 +1,129 @@
+.sectionContainer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 16px;
+}
+
+.clientContainer {
+  position: relative;
+  isolation: isolate;
+}
+
+.clientBg {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  transform: translate(-65%, -35%) rotate(-45deg);
+  height: 192px;
+  width: unset;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.sectionSubheader {
+  margin-bottom: 16px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #ffa03f;
+}
+.sectionHeader {
+  overflow: hidden;
+  font-size: 40px;
+  font-weight: 600;
+  color: #020617;
+  line-height: 52px;
+  span {
+    color: #ffa03f;
+  }
+}
+
+.clientCard {
+  position: relative;
+  isolation: isolate;
+  margin-top: 64px;
+  display: none;
+  animation: fadeEffect 1s;
+
+  &.active {
+    display: block; 
+  }
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .clientImage {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 32px;
+    box-shadow: 30px -30px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .clientContent {
+    padding: 32px;
+    background-color: #ffffff;
+    border-left: 5px solid #ffa03f;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-30px);
+
+    h4 {
+        font-size: 32px;
+        font-weight: 500;
+        color: #020617;
+    }
+
+    h5 {
+        margin-bottom: 32px;
+        font-size: 19.2px;
+        font-weight: 400;
+        color: #ffa03f;
+    }
+
+    p {
+      color: #1e293b;
+    }
+  }
+}
+
+.clientBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  .btn {
+    padding: 10px 12px;
+    font-size: 24px;
+    color: #ffa03f;
+    background-color: #ffffff;
+    border: 2px solid #ffa03f;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        &:hover{
+            color :#ffffff;
+            background-color: #f37c4d;
+        }
+  }
+}
+
+@media (width > 768px){
+    .clientBtns{
+        position: absolute;
+        top: 240px;
+        right: 16px;
+        margin-top: 0;
+    }
+}
+@media (width > 540px) {
+    .clientContent {
+        position: absolute;
+        top: 50% !important;
+        right: 0 !important;
+        transform: translateY(-50%) !important;
+        margin-left: 32px !important; 
+        width: 75% !important;
+    }
+}
