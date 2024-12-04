@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './NavBar.module.scss';
+import styles from './Navbar.module.scss';
 import 'remixicon/fonts/remixicon.css';
 
 const NavBar: React.FC = () => {
