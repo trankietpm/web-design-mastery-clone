@@ -1,13 +1,14 @@
-"use client";
+import Link from 'next/link';
+import styles from './page.module.css';
 
-import HomePage from "./pages";
-
-export default function Home() {
-
-
+export default function HomePage() {
   return (
-    <div>
-      <HomePage/>
+    <div className={styles.homePageContainer}>
+      <h1 className={styles.homePageTitle}>Welcome to the Home Page</h1>
+      <Link href="/TravelToor" className={styles.homePageLink}>Go to TravelToor</Link>
+      <Link href="/Pet" className={styles.homePageLink}>Go to Pet</Link>
     </div>
   );
 }
+
+

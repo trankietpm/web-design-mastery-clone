@@ -1,0 +1,54 @@
+.sectionContainer {
+  max-width: 1200px;
+  padding: 80px 16px;
+  margin: auto;
+
+  .subheader {
+    font-size: 19.2px;
+    font-weight: 500;
+    color: #908ca3;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 40px;
+    font-weight: 500;
+    color: #3f3b57;
+    text-align: center;
+    line-height: 56px;
+  }
+
+  .serviceFlex {
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .serviceCard {
+    div {
+        margin-bottom: 32px;
+        margin-inline: auto;
+        width: 120px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #dff3fd;
+        border-radius: 100%;
+
+      img {
+        max-width: 45px;
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    p {
+        font-weight: 500;
+        color: #908ca3;
+    }
+  }
+}

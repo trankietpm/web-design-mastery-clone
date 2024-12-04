@@ -1,0 +1,124 @@
+.sectionContainer {
+  max-width: 1200px;
+  padding: 80px 16px;
+  margin: auto;
+
+  .subheader {
+    font-size: 19.2px;
+    font-weight: 500;
+    color: #908ca3;
+    text-align: center;
+  }
+
+  .header {
+    font-size: 40px;
+    font-weight: 500;
+    color: #3f3b57;
+    text-align: center;
+    line-height: 56px;
+  }
+
+  .aboutRow {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    overflow: hidden;
+
+    .aboutImage {
+      flex: 1;
+      padding: 16px;
+
+      img {
+        flex: 1;
+        max-width: 400px;
+        margin-inline: auto;
+        width: 100%;
+        display: flex;
+      }
+    }
+
+    .aboutContent {
+      flex: 1;
+      text-align: center;
+
+      span {
+        margin-inline: auto;
+        margin-bottom: 16px;
+        width: 80px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+
+        img {
+            max-width: 40px;
+            width: 100%;
+             display: flex;
+        }
+      }
+
+      h4 {
+        max-width: 450px;
+        margin-inline: auto;
+        margin-bottom: 16px;
+        font-size: 32px;
+        font-weight: 500;
+        color: #3f3b57;
+        line-height: 48px;
+      }
+
+      p {
+        max-width: 450px;
+        margin-inline: auto;
+        color: #908ca3;
+      }
+    }
+  }
+
+  .aboutRow:nth-child(3) {
+    .aboutContent {
+      span {
+        background-color: #fdf2d9;
+      }
+    }
+  }
+  .aboutRow:nth-child(4) {
+    .aboutContent {
+      span {
+        background-color: #e8f7fe;
+      }
+    }
+  }
+  .aboutRow:nth-child(5) {
+    .aboutContent {
+      span {
+        background-color: #fbebf1;
+      }
+    }
+  }
+}
+@media (width > 768px) {
+    .aboutRow {
+      flex-direction: row !important;
+      align-items: center !important;
+  
+      &:nth-child(4) {
+        flex-direction: row-reverse !important;
+      }
+    }
+  
+    .aboutImage {
+        img{
+            max-width: unset !important;
+            margin-inline: auto !important;
+            height: auto;
+        }
+    }
+  
+    .aboutContent {
+      text-align: left !important;
+    }
+  }
+  
